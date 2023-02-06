@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div>
+            <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+                &#8962
+            </button>
+            <br>
+            <h1>Comanda</h1><br>
+            <form method="POST">
+                <label for="Name">IDcomanda:</label>
+                <input type="text" name="IDcomanda"><br><br>
+                <label for="Name">Cod:</label>
+                <input type="text" name="Cod"><br><br>
+                <label for="Name">Data Cerere: (luna-zi-an)</label>
+                <input type="text" name="DataCerere"><br><br>
+                <label for="Name">Data Primire: (luna-zi-an)</label>
+                <input type="text" name="DataPrimire"><br><br>
+                <label for="Name">Pret:</label>
+                <input type="text" name="Pret"><br><br>
+                <label for="Name">ID furnizor:</label>
+                <input type="text" name="IDfurnizor">
+                <br><br>
+                <input type="submit" onclick="window.location.href = '{{ url_for('submitInsertComanda') }}';">
+            </form>
+            <br>
+        </div>
+    </body>
+</html>

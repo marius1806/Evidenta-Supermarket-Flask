@@ -1,0 +1,70 @@
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div>
+        <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+            &#8962
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('produse') }}';">
+            Produse
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('categorii') }}';">
+            Categorii
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('comenzi') }}';">
+            Comenzi
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('furnizori') }}';">
+            Furnizori
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('insert') }}';">
+            Insert
+        </button>
+        <button type="button"  onclick="window.location.href = '{{ url_for('update') }}';">
+            Update
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('delete') }}';">
+            Delete
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('logout') }}';">
+            Logout
+        </button>
+    </div>
+    <h1>{{ name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th><h2>Nume<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Prenume<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Adresa<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Localitate<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Judet<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Tara<h2></th>
+                <th><h2>&nbsp&nbsp&nbsp Telefon<h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <th>{{ row[1] }}</th>
+                <th>{{ row[2] }}</th>
+                <th>{{ row[3] }}</th>
+                <th>{{ row[4] }}</th>
+                <th>{{ row[5] }}</th>
+                <th>{{ row[6] }}</th>
+                <th>{{ row[7] }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table><br><br>
+    <div>
+        <button type="button" onclick="window.location.href = '{{ url_for('furnizorPrincipal') }}';">
+            Furnizorul principal
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('furnizoriZeroComenzi') }}';">
+            Furnizori cu 0 comenzi livrate
+        </button>
+    </div>
+</body>

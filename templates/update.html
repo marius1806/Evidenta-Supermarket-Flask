@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div>
+            <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+                &#8962
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('updateCategorie') }}';">
+                Categorie
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('updateProduse') }}';">
+                Produse
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('furnizori') }}';">
+                Furnizori
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('update') }}';">
+                Comenzi
+            </button>
+            <button type="button">
+                Comanda - Produs
+            </button>
+        </div>
+    </body>
+</html>

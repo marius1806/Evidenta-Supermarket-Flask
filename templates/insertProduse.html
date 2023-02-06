@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div>
+            <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+                &#8962
+            </button>
+            <br>
+            <h1>Produs</h1><br>
+            <form method="POST">
+                <label for="Name">IDprodus:</label>
+                <input type="text" name="IDprodus"><br><br>
+                <label for="Name">Denumire:</label>
+                <input type="text" name="Denumire"><br><br>
+                <label for="Name">IDcategorie:</label>
+                <input type="text" name="IDcategorie"><br><br>
+                <label for="Name">Cantitate:</label>
+                <input type="text" name="Cantitate"><br><br>
+                <label for="Name">Pret bucata:</label>
+                <input type="text" name="PretBucata">
+                <br><br>
+                <input type="submit" onclick="window.location.href = '{{ url_for('submitInsertProdus') }}';">
+            </form>
+            <br>
+        </div>
+    </body>
+</html>

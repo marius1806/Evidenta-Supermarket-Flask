@@ -1,0 +1,77 @@
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div>
+        <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+            &#8962
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('produse') }}';">
+            Produse
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('categorii') }}';">
+            Categorii
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('comenzi') }}';">
+            Comenzi
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('furnizori') }}';">
+            Furnizori
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('insert') }}';">
+            Insert
+        </button>
+        <button type="button"  onclick="window.location.href = '{{ url_for('update') }}';">
+            Update
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('delete') }}';">
+            Delete
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('logout') }}';">
+            Logout
+        </button>
+    </div>
+    <h1>{{ name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <h2>Denumire</h2>
+                </th>
+                <th>
+                    <h2>&nbsp&nbsp&nbsp Categorie</h2>
+                </th>
+                <th>
+                    <h2>&nbsp&nbsp&nbsp Cantitate</h2>
+                </th>
+                <th>
+                    <h2>&nbsp&nbsp&nbsp Pret Bucata<h2>
+                </th>
+                <th>
+                    <h2>&nbsp&nbsp&nbsp Pret Total<h2>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(length) %}
+            <tr>
+                <th>{{ rows[i][0] }}</th>
+                <th>{{ rows[i][1] }}</th>
+                <th>{{ rows[i][2] }}</th>
+                <th>{{ rows[i][3] }}</th>
+                <th>{{ pretTotal[i] }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table><br><br>
+    <button type="button" onclick="window.location.href = '{{ url_for('produseComandate') }}';">
+        Top 3 cele mai aprovizionate produse
+    </button>
+    <button type="button" onclick="window.location.href = '{{ url_for('produseIeftine') }}';">
+        Top 3 cele mai ieftine produse
+    </button>
+    <button type="button" onclick="window.location.href = '{{ url_for('produseVandute') }}';">
+        Top 3 cele mai vandute produse
+    </button>
+</body>

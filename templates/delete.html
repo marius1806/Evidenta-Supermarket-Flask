@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div>
+            <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+                &#8962
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('deleteCategorie') }}';">
+                Categorie
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('deleteProdus') }}';">
+                Produse
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('furnizori') }}';">
+                Furnizori
+            </button>
+            <button type="button" onclick="window.location.href = '{{ url_for('delete') }}';">
+                Comenzi
+            </button>
+            <button type="button">
+                Comanda - Produs
+            </button>
+        </div>
+    </body>
+</html>

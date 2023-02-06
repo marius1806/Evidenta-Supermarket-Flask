@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div>
+        <button type="button" onclick="window.location.href = '{{ url_for('index') }}';">
+            &#8962
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('produse') }}';">
+            Produse
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('categorii') }}';">
+            Categorii
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('comenzi') }}';">
+            Comenzi
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('furnizori') }}';">
+            Furnizori
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('insert') }}';">
+            Insert
+        </button>
+        <button type="button"  onclick="window.location.href = '{{ url_for('update') }}';">
+            Update
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('delete') }}';">
+            Delete
+        </button>
+        <button type="button" onclick="window.location.href = '{{ url_for('logout') }}';">
+            Logout
+        </button>
+    </div>
+    <h1>{{ name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <h2>Denumire</h2>
+                </th>
+                <th>
+                    <h2>&nbsp&nbsp&nbsp Numar de bucati comandate</h2>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <th>{{ row[0] }}</th>
+                <th>{{ row[1] }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
